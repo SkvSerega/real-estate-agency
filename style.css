@@ -202,11 +202,15 @@ opacity: 1;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: url(images/png-transparent-check-mark-symbol-black-check-mark-angle-text-triangle.png)  no-repeat;
-    background-size: 20%;
+    transform: translate(0%, -50%);
     opacity: 0;
-    transition: background 0.3s ease;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
 }
 .label1 input[type='checkbox']:checked + .fake1 { 
     background: #FFE074; 
@@ -214,9 +218,15 @@ opacity: 1;
    .label1 input[type='checkbox']:checked + .fake1 + .text1 { 
     font-weight: bold;
    }
-.label1 input:checked + .fake1::before {
-opacity: 1;
+   .label1 input:checked + .fake1::before {
+    opacity: 1;
+    content: '✓';
+    padding-top: 6px;
+    padding-left: 1px;
 }
+
+
+
 .rotated2 {
     transform: rotate(90deg);
     margin-left: 45px;
@@ -274,6 +284,7 @@ text-align: center;
 width: 252px;
 height: 50px;
 margin-top: 10px;
+cursor: pointer;
 }
 .filtersOff {
     background: white;
@@ -284,6 +295,7 @@ text-align: center;
 width: 252px;
 height: 50px;
 margin-top: 10px;
+cursor: pointer;
 }
 .else {
     
