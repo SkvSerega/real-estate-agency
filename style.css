@@ -108,6 +108,7 @@ font-size: 18px;
 line-height: 21px;
 display: flex;
 margin-bottom: 20px;
+margin-top: 10px;
 }
 .dropdown {
     position: relative;
@@ -119,7 +120,7 @@ margin-bottom: 20px;
     margin-top: 20px;
     background-color: #f6f6f6;
     border: 1px solid #D6D6D6;
- margin-bottom: 30px;
+ margin-bottom: 20px;
     width: 250px;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 40px 60px;
@@ -130,7 +131,7 @@ margin-bottom: 20px;
     color: black;
     font-family: 'Roboto';
     background-color: white;
-  
+  cursor: pointer;
 }
 
 .anything {
@@ -142,25 +143,84 @@ border-top: 1px solid #D6D6D6 !important;
 .rotated {
     transform: rotate(90deg);
     margin-left: 93px;
-    font-weight: 100;
+    font-weight: bold;
 }
 .rotated1 {
     transform: rotate(90deg);
     margin-left: 145px;
-    font-weight: 100;
+    font-weight: bold;
 }
-.check input {
-margin-bottom: 20px;
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
+.label input[type='radio'] { 
+    display: none; 
+}
+.fake {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: relative;
+
+}
+.fake::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .2s;
+}
+.label input[type='radio']:checked + .fake { 
+    background: #FFE074; 
+    
+   }
+   .label input[type='radio']:checked + .fake + .text { 
+   
+    font-weight: bold;
+   }
+.label input:checked + .fake::before {
+opacity: 1;
+
+}
+.label1 input[type='checkbox'] { 
+    display: none; 
+}
+.fake1 {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    position: relative;
+}
+.fake1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(images/png-transparent-check-mark-symbol-black-check-mark-angle-text-triangle.png)  no-repeat;
+    background-size: 20%;
+    opacity: 0;
+    transition: background 0.3s ease;
+}
+.label1 input[type='checkbox']:checked + .fake1 { 
+    background: #FFE074; 
+   }
+   .label1 input[type='checkbox']:checked + .fake1 + .text1 { 
+    font-weight: bold;
+   }
+.label1 input:checked + .fake1::before {
+opacity: 1;
 }
 .rotated2 {
     transform: rotate(90deg);
     margin-left: 45px;
-    font-weight: 100;
+    font-weight: bold;
     
 }
 .check a {
@@ -181,8 +241,8 @@ line-height: 19px;
     outline: none;
     background: #c6c6c6;
 border-radius: 20px;
-    width: 80px;
-    height: 40px;
+width: 45px;
+    height: 22px;
     transition: .5s;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
     position: relative;
@@ -193,17 +253,17 @@ border-radius: 20px;
 .switch input::before {
 content: '';
 position: absolute;
-width: 20px;
-height: 20px;
-border-radius: 20px;
-top: 9px;
-left: 4px;
+width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    top: 6px;
+    left: 4px;
 background: black;
 transition: .5s;
 transform: scale(1.1);
 }
 .switch input:checked::before {
-    left: 56px;
+    left: 30px;
 }
 .filtersOn{
     background: #FFCF26;
