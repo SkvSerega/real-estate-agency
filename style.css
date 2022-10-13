@@ -224,6 +224,10 @@
     margin-left: 45px;
     font-weight: bold; 
 }
+.check {
+    display: grid;
+    grid-gap: 0.5vw;
+}
 .check a {
     color: #4290C9;
     text-decoration: none;
@@ -250,6 +254,10 @@
 }
 .switch input:checked {
     background:  #FFE074;
+}
+.check2 {
+    display: grid;
+    grid-gap: 0.5vw;
 }
 .switch input::before {
     content: '';
